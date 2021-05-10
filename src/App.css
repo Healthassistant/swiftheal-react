@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+body {
+    background: #f1f1f1;
+    color: #313030;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/*
+Colors used:
+
+#3282b8
+#fff
+#999999
+#e3e3e3
+
+#0f4c75
+#0b3c5d
+
+*/
+
+/********************
+1. navbar css
+*********************/
+
+.navbar-brand.navimg{
+    background: #0f4c75;
+    border-radius: 25px;
+}
+.custom-nav {
+    background-color: #3282b8;
 }
 
-.App-link {
-  color: #61dafb;
+.custom-nav li {
+    padding: 0 0.5em 0 0.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.custom-nav ul {
+    border: 0;
 }
+
+.custom-nav li a {
+    color: white;
+    border-radius: 5px;
+}
+
+.dropdown-toggle .dropdownbg{
+    background: #0f4c75;
+    border-radius: 25px;
+}
+
+.signup_modal{
+    background: #0f4c75;
+    border-radius: 25px;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+    color: #3282b8 !important;
+    background-color: #fff !important;
+}
+
+
+/********************
+2. jumbotron css
+*********************/
+
+.jumbotron {
+    background-color: #3282b8;
+    color: #fff;
+    padding: 100px 25px 25px 25px;
+    font-family: Montserrat, sans-serif;
+}
+
+
+/********************
+3. carousel css
+*********************/
+.carousel-sec {
+    background:#e3e3e3;
+}
+.carousel-item img {
+    height: 30em;
+    filter: brightness(70%);
+    border-radius: 0 100px 100px 0;
+    background-size: cover;
+}
+
+.carousel-caption {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(0, 0, 0, 0.2);
+    border: 3px solid #0f4c75;
+    /*    font-family: 'Oswald', sans-serif;*/
+}
+
+.carousel-control-next .active,
+.carousel-control-prev .active {
+    background-color: #0f4c75;
+}
+
+.carousel-indicators .active {
+    background-color: #0f4c75;
+    border-radius: 100%;
+    border-color: #0f4c75;
+}
+
+
+.carousel-indicators li {
+    border-radius: 100%;
+    border-color: white;
+    opacity: 0.8;
+}
+
+.caro-cont {
+    padding: 5em 0;
+}
+
+.btn-custom-1 {
+    background: #0f4c75;
+    color: white;
+    transition: all 0.2s;
+}
+
+.btn-custom-1:hover {
+    color: white;
+    background: #0b3c5d;
+    border-color: #0b3c5d;
+}
+
+/***************
+6. footer css
+****************/
+
+.main-footer,
+.main-footer a {
+    color: #999999;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.main-footer h4 {
+    color: #FFF;
+    padding: 0 5px 15px 0;
+}
+

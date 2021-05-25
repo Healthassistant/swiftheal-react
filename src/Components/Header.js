@@ -36,13 +36,13 @@ export default function Header(){
         <i className="fas fa-user"></i> Login
         </a>
         <ul className="dropdown-menu " style={myStyle} aria-labelledby="navbarDropdown" >
-        <li><a className="dropdown-item" onclick="openModal('Doctor')">Login as Doctor</a>
+        <li><a className="dropdown-item">Login as Doctor</a>
         </li>
-        <li><a className="dropdown-item" onclick="openModal('Patient')">Login as
+        <li><a className="dropdown-item">Login as
         Patient</a></li>
-        <li><a className="dropdown-item" onclick="openModal('Admin')">Login as Admin</a>
+        <li><a className="dropdown-item">Login as Admin</a>
         </li>
-        <li><a className="dropdown-item" onclick="openModal('Pathologist')">Pathologist's login</a>
+        <li><a className="dropdown-item">Pathologist's login</a>
         </li>
         </ul>
         </li>
@@ -64,7 +64,7 @@ export default function Header(){
         
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#3282b8" fill-opacity="1"
+        <path fill="#3282b8" fillOpacity="1"
         d="M0,160L30,176C60,192,120,224,180,218.7C240,213,300,171,360,160C420,149,480,171,540,202.7C600,235,660,277,720,266.7C780,256,840,192,900,149.3C960,107,1020,85,1080,106.7C1140,128,1200,192,1260,197.3C1320,203,1380,149,1410,122.7L1440,96L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
         </path>
         </svg>

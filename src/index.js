@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import axios from 'axios';
+import {axiosConfig} from './Config';
+for (let config in axiosConfig)
+{
+  axios.defaults[config] = axiosConfig[config];
+}
 ReactDOM.render(
   <React.StrictMode>
     <App />

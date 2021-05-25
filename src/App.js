@@ -1,15 +1,24 @@
 import './App.css';
-import Header from "./MyComponents/Header"
-import Carousel from "./MyComponents/Carousel"
-import Footer from "./MyComponents/Footer"
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import Home from "./Views/Home";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-    <Header />
-    <Carousel />
-    <Footer />
-    </div>
+    <Router>
+        <Header />
+        <Switch>   
+            <Route path="/">
+                <Home/>
+            </Route>
+        </Switch>
+        <Footer />
+    </Router>
     );
   }
 

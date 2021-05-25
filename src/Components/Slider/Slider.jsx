@@ -51,7 +51,7 @@ const Slider = () => {
                         variant="large";
                     }
                     i++;
-                    return <Card img={axios.defaults.baseURL+doctor.Photo} link={axios.defaults.baseURLs+doctor.Photo} specialisation={doctor.Area_of_Specialisation} key={doctor.Name} name={doctor.Name} variant={variant} qualification = {doctor.Qualification}/>
+                    return <Card img={axios.defaults.baseURL+doctor.Photo} link={axios.defaults.baseURL+doctor.Photo} specialisation={doctor.Area_of_Specialisation} key={doctor.Name} name={doctor.Name} variant={variant} qualification = {doctor.Qualification}/>
                 }):<CircularProgress color="secondary" />}
             </div>
             <button className="control right" onClick={move_slider} direction="+1"><ChevronRightIcon  onClick={move_slider} direction="+1"/></button>

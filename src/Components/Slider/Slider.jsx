@@ -15,11 +15,10 @@ const Slider = () => {
     const displacement = 150;
     // Api calls
     useEffect(() => {
-        axios.get("http://192.168.43.190:8000/doctor/top_doctors/").then(res => {
+        axios.get("/doctor/top_doctors/").then(res => {
             if(res.status==200)
             {
                 set_doctor_list(res.data);
-                console.log(res.data);
                 set_n_cards(res.data.length);
             }
         }).catch(err => {
@@ -31,10 +30,7 @@ const Slider = () => {
     // Slider
     const move_slider = (e) => {
         let direction = parseInt(e.target.getAttribute('direction'));
-        console.log(e.target)
         let displace = move + direction * displacement;
-        console.log(displace,move,direction,displacement);
-        console.log(n_cards);
         if (displace > 0)
             set_move(0);
         else if (displace < -(card_width * n_cards - window.innerWidth))
@@ -55,7 +51,7 @@ const Slider = () => {
                         variant="large";
                     }
                     i++;
-                    return <Card img={"http://192.168.43.190:8000"+doctor.Photo} link={"http://localhost:8000"+doctor.Photo} specialisation={doctor.Area_of_Specialisation} key={doctor.Doctor_ID} name={doctor.Name} variant={variant} qualification = {doctor.Qualification}/>
+                    return <Card img={axios.defaults.baseURL+doctor.Photo} link={axios.defaults.baseURLs+doctor.Photo} specialisation={doctor.Area_of_Specialisation} key={doctor.Name} name={doctor.Name} variant={variant} qualification = {doctor.Qualification}/>
                 }):<CircularProgress color="secondary" />}
             </div>
             <button className="control right" onClick={move_slider} direction="+1"><ChevronRightIcon  onClick={move_slider} direction="+1"/></button>
